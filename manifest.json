@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2026.10.14.1",
+  "files": [
+    {
+      "path": "mods/Arena Breakout Infinite Melee Pack-0.1.0.jar",
+      "size": 6027969,
+      "sha256": "F41122E68EAB195DB5B7D8E33BB5B71E86C8DF456FF4DFFB1325F28495BB23D2",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__Arena_Breakout_Infinite_Melee_Pack-0.1.0.jar"
+    },
+    {
+      "path": "mods/BlueGoldCleanerTrade-1.0.0.jar",
+      "size": 44287,
+      "sha256": "4A9EC0AF126432AE1A0881D5A023C5ECB427F0C659A949AEDB18B723685DD814",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__BlueGoldCleanerTrade-1.0.0.jar"
+    },
+    {
+      "path": "mods/DeadZone-TaCZ-MeleeCooldownFix-0.4.0-client.jar",
+      "size": 4153,
+      "sha256": "0B452DBEB214F8BA621713414E9EC1CFF389571C4EACC03A99E5BC242A29FC8D",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__DeadZone-TaCZ-MeleeCooldownFix-0.4.0-client.jar"
+    },
+    {
+      "path": "mods/DeltaForce Melee Pack-0.2.0.jar",
+      "size": 10380850,
+      "sha256": "E0CCCE77D58D0E480AEDBEBF50234C11AC19CC79016FAB477232CB9CEC4AAF0B",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__DeltaForce_Melee_Pack-0.2.0.jar"
+    },
+    {
+      "path": "mods/HouseProtect-1.20.1-1.1.5.jar",
+      "size": 206062,
+      "sha256": "3ABD787AF114FA7B86B321C7B1E3A8E8C38AF904FAB58CF21360E4825B430837",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__HouseProtect-1.20.1-1.1.5.jar"
+    },
+    {
+      "path": "mods/MTLCASINO-1.05.jar",
+      "size": 132610,
+      "sha256": "E45D462DCF22CE7EAB33531E81DEA57327511DBE6E6CA6BA47369AB894CA3098",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__MTLCASINO-1.05.jar"
+    },
+    {
+      "path": "mods/Partymap-1.0.0.jar",
+      "size": 126043,
+      "sha256": "4AD25DA14E610442A8FD39C57BC1DC13ED58D4047F9F9BCC14DA0E1A7AD08D9C",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__Partymap-1.0.0.jar"
+    },
+    {
+      "path": "mods/acguard-1.0.0.jar",
+      "size": 88742,
+      "sha256": "E62827B670D73AD815E9F17FCD714DD2B797377A070A5B140077D17385F36842",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__acguard-1.0.0.jar"
+    },
+    {
+      "path": "mods/airdrop-1.0.0.jar",
+      "size": 148071,
+      "sha256": "7238CF7D15A004AD9E25D5CCAD3E9A896D0115B0154D003069F172A434595EEB",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__airdrop-1.0.0.jar"
+    },
+    {
+      "path": "mods/bountygame-client-1.0.0.jar",
+      "size": 753947,
+      "sha256": "779937F77D2C292B943BC0C63CEFE8473C9DEDF0941CC00FC5A504A14CE6B4D0",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__bountygame-client-1.0.0.jar"
+    },
+    {
+      "path": "mods/c4mod-1.20.1-1.0.0.jar",
+      "size": 85262,
+      "sha256": "F9D5887E8F0C3961140BC49BF7E3219DE8D9BEFFEAEAC5209826A22803B9B492",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__c4mod-1.20.1-1.0.0.jar"
+    },
+    {
+      "path": "mods/corpse-forge-1.20.1-1.0.23.jar",
+      "size": 245644,
+      "sha256": "8D77C5FC8DC981C750A8E66D4665F055457F748F0CE49A303D9BC50347BDBF7C",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__corpse-forge-1.20.1-1.0.23.jar"
+    },
+    {
+      "path": "mods/csgochestmod-1.0.1.jar",
+      "size": 61933,
+      "sha256": "E932533FACE1AEDAF389C5FA1871E89D7A3FB113110EC3445AFCB22300C3E391",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__csgochestmod-1.0.1.jar"
+    },
+    {
+      "path": "mods/deadzone-client-1.0.0.jar",
+      "size": 10162085,
+      "sha256": "1396267F87D3CC9286FA4B7AA9BAB41BBA9C0057D0764DC262A2D6D7F98A0065",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__deadzone-client-1.0.0.jar"
+    },
+    {
+      "path": "mods/directionhud-1.0.0.jar",
+      "size": 14957,
+      "sha256": "C3B361709FA2CD7D69385BF34302257C811F4F8FDF97AA6E0551C61422F164E4",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__directionhud-1.0.0.jar"
+    },
+    {
+      "path": "mods/doorlock-1.20.1-1.0.0.jar",
+      "size": 101878,
+      "sha256": "5157EA05DBAF40743D81DC9BD712BD5038498E2FCEC5B33A9A964E80AEE04CBB",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__doorlock-1.20.1-1.0.0.jar"
+    },
+    {
+      "path": "mods/embeddium-0.3.31+mc1.20.1.jar",
+      "size": 1320675,
+      "sha256": "EED3D1325F2ACC2FD4E69BB495E5CCB91D962126AC5330F0582EBC2A3DAF47FB",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__embeddium-0.3.31%2Bmc1.20.1.jar"
+    },
+    {
+      "path": "mods/geckolib-forge-1.20.1-4.8.4.jar",
+      "size": 1038209,
+      "sha256": "4518779A31B6C2ABB92C98B5AD17EF3D60177DF68626BFC86C44DE2764913C2B",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__geckolib-forge-1.20.1-4.8.4.jar"
+    },
+    {
+      "path": "mods/lrtactical-1.20.1-0.4.3.jar",
+      "size": 6614642,
+      "sha256": "930372CAB33E1F563F597C74F9155B5ED25E6F2B0FF7E12DFC86255E1020EF2D",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__lrtactical-1.20.1-0.4.3.jar"
+    },
+    {
+      "path": "mods/pubgdown-1.0.0.jar",
+      "size": 55682,
+      "sha256": "A11A487F9F9F0E218C97625EB78D98D3E7E613025B4047B3EDFE6C907836A185",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__pubgdown-1.0.0.jar"
+    },
+    {
+      "path": "mods/rustchest-mod-1.1.0.jar",
+      "size": 38951,
+      "sha256": "9AF96ABA991F2C2FA9C807A388D6FA5F361C25AFFC10A43D2EC9577A65403ADB",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__rustchest-mod-1.1.0.jar"
+    },
+    {
+      "path": "mods/survival_instinct-1.0.2-forge-1.20.1.jar",
+      "size": 2136620,
+      "sha256": "9F73D8EC5FCF6BB6641F46C0484C63DBFC4ED883C73F7DBBAD38DE8FCC753E62",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__survival_instinct-1.0.2-forge-1.20.1.jar"
+    },
+    {
+      "path": "mods/tacz-1.20.1-1.1.8-hotfix.jar",
+      "size": 57465167,
+      "sha256": "9ED8ADA1283ED7A793A70CC1B51C4A340F367CE84707E1A7B8CF21EE3D288D77",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__tacz-1.20.1-1.1.8-hotfix.jar"
+    },
+    {
+      "path": "mods/warpnpc-1.0.0.jar",
+      "size": 83534,
+      "sha256": "BBA96D0419A4EFC1FA6720D074FAF0D5BBC1175951D3F3C4489D7F32DD3F9FAB",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__warpnpc-1.0.0.jar"
+    },
+    {
+      "path": "mods/warznpc-1.0.0.jar",
+      "size": 40483,
+      "sha256": "5BD3F2819E9660B615D40190CD84CD73FA4946AC328FA4C8D937299D86495C96",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/mods__warznpc-1.0.0.jar"
+    },
+    {
+      "path": "tacz/Apocalypse_v1.1.7_G.zip",
+      "size": 6829237,
+      "sha256": "D5B620657CF0AFE89EE671D3D89E7698341106C3B5AC184A8B8688463E2783F2",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/tacz__Apocalypse_v1.1.7_G.zip"
+    },
+    {
+      "path": "tacz/CS2 Knifes Pack v1.0.1.zip",
+      "size": 1063408,
+      "sha256": "5CAB4AF53CB80FB016EF14FBB1BC27CD21D3B2D234415301CF4A9A4238A10C10",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/tacz__CS2_Knifes_Pack_v1.0.1.zip"
+    },
+    {
+      "path": "tacz/Cold War from 1947-1991 v0.51.zip",
+      "size": 12082290,
+      "sha256": "A5A4766A5B8AD0272C1B0D921C5402B0C61A8CC12169D7411585D3DBF6B1246B",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/tacz__Cold_War_from_1947-1991_v0.51.zip"
+    },
+    {
+      "path": "tacz/GunpowderRevolution_gunpack v1.2.7.zip",
+      "size": 13508068,
+      "sha256": "5D1DEB681FB087442B35F16100AACDF81A13CB9DFD5A1085FEF7169E3088A749",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/tacz__GunpowderRevolution_gunpack_v1.2.7.zip"
+    },
+    {
+      "path": "tacz/RE_Gunpack_v1.1.5_tacz1.1.8.zip",
+      "size": 20739175,
+      "sha256": "048888C57E2C1AA6B04582EF72AD63674830D595D51FFB1BE841DE4AF9DF3DA2",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/tacz__RE_Gunpack_v1.1.5_tacz1.1.8.zip"
+    },
+    {
+      "path": "resourcepacks/Thai Font Fix.zip",
+      "size": 709016,
+      "sha256": "8660B0E794E80D7C40559E18D8B3E10ECEE4FACA6E8C0333AF39ACB0F38B070D",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/resourcepacks__Thai_Font_Fix.zip"
+    },
+    {
+      "path": "resourcepacks/WarpNPC-ResourcePack.zip",
+      "size": 25134,
+      "sha256": "6BEE0DFFD9A7E8C200D829A97BB294637F6258A2F546F24B1CB95162212DEF23",
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/modpack-2026.10.14.1/resourcepacks__WarpNPC-ResourcePack.zip"
+    }
+  ]
+}
