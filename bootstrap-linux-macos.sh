@@ -1,57 +1,88 @@
 #!/bin/sh
-# DeadZone Launcher bootstrap: enable online incremental Modpack updates.
+# One-time compact upgrade for existing macOS/Linux DeadZone 0.3.1.
+# Linux AppImage is extracted locally so no complete AppImage download is needed.
 set -eu
-manifest='https://raw.githubusercontent.com/Namnarak/DeadZoneLauncher-Updates/main/manifest.json'
-if command -v curl >/dev/null 2>&1; then curl -fsSIL --max-time 20 "$manifest" >/dev/null
-elif command -v wget >/dev/null 2>&1; then wget -q --spider "$manifest"
-else echo 'curl or wget required' >&2; exit 1
-fi
-if [ "$(uname -s)" = "Darwin" ]; then
-  candidate="${1:-}"
-  [ -n "$candidate" ] || candidate="$HOME/Applications/DeadZoneLauncher.app"
-  [ -d "$candidate" ] || candidate='/Applications/DeadZoneLauncher.app'
-  case "$candidate" in *.app) target="$candidate/Contents/MacOS/assets/updates.json";; *)
-    target="$candidate/assets/updates.json";;
-  esac
-elif [ "$(uname -s)" = "Linux" ]; then
-  candidate="${1:-}"
-  if [ -f "$candidate" ]; then
-    case "$candidate" in *.AppImage)
-      # AppImage itself is read-only. Reuse the user's already downloaded AppImage
-      # and extract it locally; no new 200-MB download needed.
-      install="$HOME/.local/opt/deadzone-launcher"
-      mkdir -p "$HOME/.local/opt" "$HOME/.local/share/applications"
-      work="$(mktemp -d)"
-      (cd "$work"; "$candidate" --appimage-extract >/dev/null)
-      test -f "$work/squashfs-root/usr/bin/assets/updates.json"
-      if [ -d "$install" ]; then mv "$install" "$install.backup-$(date +%Y%m%d%H%M%S)"; fi
-      mv "$work/squashfs-root" "$install"
-      rmdir "$work"
-      cat > "$HOME/.local/share/applications/deadzone-launcher-updated.desktop" <<DESKTOP
+os="$(uname -s)"
+arch="$(uname -m)"
+case "$os" in
+Darwin)
+  case "$arch" in arm64) rid='osx-arm64'; sha='f3bcca1565245b8c1112a7588f400b827a4058e70275bf65cecb8db48cab08ec';; x86_64) rid='osx-x64'; sha='6a570721a21db4a03bd5c94f300611ebbf96ab475220b930aea2f0abaabfdb34';; *) echo "Unsupported macOS CPU" >&2; exit 1;; esac
+  dll='DeadZoneLauncher.dll'
+  ;;
+Linux)
+  [ "$arch" = 'x86_64' ] || { echo "Unsupported Linux CPU" >&2; exit 1; }
+  rid='linux-x64'; sha='10ece906680fa786b6a122e61b59cab2b32aafc8162c4033c8866f1a427ac276'
+  dll='DeadZoneLauncher.Linux.dll'
+  ;;
+*) echo "Unsupported OS: $os" >&2; exit 1;;
+esac
+case "$rid" in
+linux-x64) name='patch-linux-x64-0.3.2.zip';;
+osx-arm64) name='patch-macos-arm64-0.3.2.zip';;
+osx-x64) name='patch-macos-x64-0.3.2.zip';;
+esac
+url="https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/$name"
+[ -n "${1:-}" ] || {
+  if [ "$os" = Darwin ]; then
+    if [ -d "$HOME/Applications/DeadZoneLauncher.app" ]; then set -- "$HOME/Applications/DeadZoneLauncher.app"
+    else set -- '/Applications/DeadZoneLauncher.app'; fi
+  else
+    set -- "$HOME/.local/opt/deadzone-launcher/usr/bin"
+  fi
+}
+candidate="$1"
+case "$candidate" in /*) : ;; *) candidate="$(pwd)/$candidate";; esac
+temp="$(mktemp -d)"
+trap 'rm -rf "$temp"' EXIT HUP INT TERM
+if [ "$os" = Linux ]; then
+  case "$candidate" in *.AppImage)
+    [ -f "$candidate" ] || { echo "AppImage file does not exist: $candidate" >&2; exit 1; }
+    (cd "$temp"; "$candidate" --appimage-extract >/dev/null)
+    test -f "$temp/squashfs-root/usr/bin/$dll" || { echo "Invalid AppImage" >&2; exit 1; }
+    final="$HOME/.local/opt/deadzone-launcher"
+    mkdir -p "$HOME/.local/opt" "$HOME/.local/share/applications"
+    # Do not replace a running extracted install. Keep the current install as a backup.
+    if [ -e "$final" ]; then mv "$final" "$final.backup-$(date +%Y%m%d%H%M%S)"; fi
+    mv "$temp/squashfs-root" "$final"
+    candidate="$final/usr/bin"
+    cat > "$HOME/.local/share/applications/deadzone-launcher-updated.desktop" <<DESKTOP
 [Desktop Entry]
 Version=1.0
 Type=Application
 Name=DeadZone Launcher (Updated)
-Exec=$install/AppRun
-Icon=deadzone-launcher
+Exec=$final/AppRun
+Icon=$final/deadzone-launcher.png
 Terminal=false
 Categories=Game;
 DESKTOP
-      candidate="$install/usr/bin"
-      echo "Extracted existing AppImage locally to $install. Open 'DeadZone Launcher (Updated)' from Applications next time."
-      ;;
-    esac
-  fi
-  [ -n "$candidate" ] || candidate="$HOME/.local/opt/deadzone-launcher/usr/bin"
-  target="$candidate/assets/updates.json"
-else echo 'Unsupported operating system' >&2; exit 1
+    echo "Reused old AppImage without downloading a replacement."
+    ;;
+  esac
 fi
-[ -f "$target" ] || { echo "Could not find existing updates.json: $target" >&2; exit 1; }
-backup="$target.bootstrap-$(date +%Y%m%d%H%M%S).bak"
-cp "$target" "$backup"
-# The legacy 0.3.1 updater reads these two fields from this bundled JSON.
-# Preserve previous config as a timestamped .bak file.
-printf '{\n  "ManifestUrl": "%s",\n  "LauncherVersion": "0.3.1"\n}\n' "$manifest" > "$target"
-echo "Online modpack updates ENABLED. Launcher preserved."
+if [ "$os" = Darwin ]; then
+  case "$candidate" in *.app) candidate="$candidate/Contents/MacOS";; esac
+fi
+[ -f "$candidate/$dll" ] || { echo "Launcher not found: $candidate/$dll" >&2; exit 1; }
+command -v curl >/dev/null 2>&1 || { echo "curl is required" >&2; exit 1; }
+curl -fLsS --retry 2 --connect-timeout 15 --max-time 120 "$url" -o "$temp/patch.zip"
+if command -v sha256sum >/dev/null 2>&1; then actual="$(sha256sum "$temp/patch.zip" | cut -d' ' -f1)"
+else actual="$(shasum -a 256 "$temp/patch.zip" | cut -d' ' -f1)"; fi
+[ "$actual" = "$sha" ] || { echo "SHA-256 mismatch; installation not modified." >&2; exit 1; }
+command -v unzip >/dev/null 2>&1 || { echo "unzip required" >&2; exit 1; }
+mkdir "$temp/unpack"
+unzip -q "$temp/patch.zip" -d "$temp/unpack"
+test -f "$temp/unpack/$dll"
+test -f "$temp/unpack/assets/updates.json"
+backup="$candidate/.deadzone-backup-032-$(date +%Y%m%d%H%M%S)"
+mkdir "$backup"
+cp -p "$candidate/$dll" "$backup/$dll"
+if [ -f "$candidate/assets/updates.json" ]; then cp -p "$candidate/assets/updates.json" "$backup/updates.json"; fi
+# Atomically install each verified update file, preserving the old copies for rollback.
+cp "$temp/unpack/$dll" "$candidate/$dll.new"
+mv -f "$candidate/$dll.new" "$candidate/$dll"
+mkdir -p "$candidate/assets"
+cp "$temp/unpack/assets/updates.json" "$candidate/assets/updates.json.new"
+mv -f "$candidate/assets/updates.json.new" "$candidate/assets/updates.json"
+echo "Success: existing $os launcher upgraded to 0.3.2 via compact patch."
 echo "Backup: $backup"
-echo "Launch the existing app to download changed mods automatically."
+echo "Start the same launcher; future modpack updates are automatic."
