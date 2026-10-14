@@ -1,0 +1,32 @@
+{
+  "launcherVersion": "0.3.2",
+  "supportedInstalledVersions": [
+    "0.3.1"
+  ],
+  "packages": {
+    "win-x64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/patch-windows-x64-0.3.2.zip",
+      "sha256": "f439690db95ddb3571959ea432af254ce55b844b4ff4e5bc3eea0f05cde3e684",
+      "bytes": 1945723,
+      "assembly": "DeadZoneLauncher.dll"
+    },
+    "linux-x64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/patch-linux-x64-0.3.2.zip",
+      "sha256": "10ece906680fa786b6a122e61b59cab2b32aafc8162c4033c8866f1a427ac276",
+      "bytes": 1940766,
+      "assembly": "DeadZoneLauncher.Linux.dll"
+    },
+    "osx-arm64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/patch-macos-arm64-0.3.2.zip",
+      "sha256": "f3bcca1565245b8c1112a7588f400b827a4058e70275bf65cecb8db48cab08ec",
+      "bytes": 1500641,
+      "assembly": "DeadZoneLauncher.dll"
+    },
+    "osx-x64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/patch-macos-x64-0.3.2.zip",
+      "sha256": "6a570721a21db4a03bd5c94f300611ebbf96ab475220b930aea2f0abaabfdb34",
+      "bytes": 1500646,
+      "assembly": "DeadZoneLauncher.dll"
+    }
+  }
+}
