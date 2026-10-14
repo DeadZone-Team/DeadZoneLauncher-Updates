@@ -1,34 +1,36 @@
 {
-  "launcherVersion": "0.3.3",
+  "launcherVersion": "0.3.4",
   "supportedInstalledVersions": [
     "0.3.1",
-    "0.3.2"
+    "0.3.2",
+    "0.3.3"
   ],
   "features": [
+    "ACGuardConsentPopup",
+    "LocalJarProcessScan",
     "StrictModAllowlist",
-    "SHA256Integrity",
-    "FailClosed"
+    "SHA256Integrity"
   ],
   "packages": {
     "win-x64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-windows-x64-0.3.3.zip",
-      "sha256": "1d8d1c5a5429620e6c3227cd8d2ec4a86ec76dbd44eba9ac22945ca5f98d7da2",
-      "bytes": 1948566
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-windows-x64-0.3.4.zip",
+      "sha256": "32ebc1d0fdb66a97eba3469a019383b7eb4a879726cf451b5bf25c93e1205e6f",
+      "bytes": 1955176
     },
     "linux-x64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-linux-x64-0.3.3.zip",
-      "sha256": "850850d82f0a07ee171a3e7cc69b5984eb4fa3017246d9821ee676d77ca19044",
-      "bytes": 1944192
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-linux-x64-0.3.4.zip",
+      "sha256": "f09931f01b2914d6a37c55e523a35e5f0acd7a8824463a71ac4b3f20327c1ed1",
+      "bytes": 1951025
     },
     "osx-arm64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-macos-arm64-0.3.3.zip",
-      "sha256": "23f61311a615acbe77a0283539c70a82c76b95453a0be0dee4838750c93c4dd1",
-      "bytes": 1504313
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-macos-arm64-0.3.4.zip",
+      "sha256": "52aa522b78d133d78539c8acb7359a2b21a9ffe3083ec50f5b544fb2de4e49f8",
+      "bytes": 1510613
     },
     "osx-x64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-macos-x64-0.3.3.zip",
-      "sha256": "33f15e53684f61ccf442190bf10e37840c880baafaa1dd00b258eac94acc19db",
-      "bytes": 1504304
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-macos-x64-0.3.4.zip",
+      "sha256": "f7139cb19afb175159f9b9bb7722125b6984862da38caa7ac250bcf061ad41ce",
+      "bytes": 1510611
     }
   }
 }
