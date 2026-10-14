@@ -1,0 +1,34 @@
+{
+  "launcherVersion": "0.3.3",
+  "supportedInstalledVersions": [
+    "0.3.1",
+    "0.3.2"
+  ],
+  "features": [
+    "StrictModAllowlist",
+    "SHA256Integrity",
+    "FailClosed"
+  ],
+  "packages": {
+    "win-x64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-windows-x64-0.3.3.zip",
+      "sha256": "241b5c5eb41cb3f4143e300c3ef429a992e109195f624a1b4f72a8c8c33a9cdb",
+      "bytes": 1948563
+    },
+    "linux-x64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-linux-x64-0.3.3.zip",
+      "sha256": "d314606700ea7dd3975dd69256cb59bb392bc517d020fb036bf288c78a26fb86",
+      "bytes": 1944193
+    },
+    "osx-arm64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-macos-arm64-0.3.3.zip",
+      "sha256": "d4a28d609a5f07c3954d551fc5b99f2189492ce7e3408d117235604b0affacc9",
+      "bytes": 1504308
+    },
+    "osx-x64": {
+      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-macos-x64-0.3.3.zip",
+      "sha256": "183473854acc8cc8d685a34661549f56a3f4304a24b6a08fa2b9e8e1e97a2c1a",
+      "bytes": 1504299
+    }
+  }
+}

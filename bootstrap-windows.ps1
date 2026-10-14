@@ -2,8 +2,8 @@
 # Does not replace the .exe, delete account data, or download any full release.
 param([string]$LauncherDir = "")
 $ErrorActionPreference = "Stop"
-$Url = "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/patch-windows-x64-0.3.2.zip"
-$Expected = "f439690db95ddb3571959ea432af254ce55b844b4ff4e5bc3eea0f05cde3e684"
+$Url = "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-windows-x64-0.3.3.zip"
+$Expected = "241b5c5eb41cb3f4143e300c3ef429a992e109195f624a1b4f72a8c8c33a9cdb"
 if (!$LauncherDir) { $LauncherDir = $PSScriptRoot }
 $LauncherDir = [IO.Path]::GetFullPath($LauncherDir)
 $exe = Join-Path $LauncherDir "DeadZoneLauncher.exe"
@@ -28,7 +28,7 @@ try {
     if (!(Test-Path (Join-Path $unpack "DeadZoneLauncher.dll")) -or !(Test-Path (Join-Path $unpack "assets\updates.json"))) {
         throw "Incomplete update payload"
     }
-    $backup = Join-Path $LauncherDir (".deadzone-backup-032-" + (Get-Date -Format yyyyMMddHHmmss))
+    $backup = Join-Path $LauncherDir (".deadzone-backup-033-" + (Get-Date -Format yyyyMMddHHmmss))
     New-Item -ItemType Directory $backup | Out-Null
     Copy-Item -LiteralPath $dll -Destination (Join-Path $backup "DeadZoneLauncher.dll")
     if (Test-Path $config) { Copy-Item -LiteralPath $config -Destination (Join-Path $backup "updates.json") }
@@ -43,7 +43,7 @@ try {
         } else { Remove-Item -LiteralPath $config -ErrorAction SilentlyContinue }
         throw
     }
-    Write-Host "Success! Existing Windows Launcher upgraded to 0.3.2 without redownloading the full app."
+    Write-Host "Success! Existing Windows Launcher upgraded to 0.3.3 without redownloading the full app."
     Write-Host "Backup: $backup"
     Write-Host "Open the same DeadZoneLauncher.exe. Mods will now update automatically."
 }

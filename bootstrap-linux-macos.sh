@@ -6,22 +6,22 @@ os="$(uname -s)"
 arch="$(uname -m)"
 case "$os" in
 Darwin)
-  case "$arch" in arm64) rid='osx-arm64'; sha='f3bcca1565245b8c1112a7588f400b827a4058e70275bf65cecb8db48cab08ec';; x86_64) rid='osx-x64'; sha='6a570721a21db4a03bd5c94f300611ebbf96ab475220b930aea2f0abaabfdb34';; *) echo "Unsupported macOS CPU" >&2; exit 1;; esac
+  case "$arch" in arm64) rid='osx-arm64'; sha='d4a28d609a5f07c3954d551fc5b99f2189492ce7e3408d117235604b0affacc9';; x86_64) rid='osx-x64'; sha='183473854acc8cc8d685a34661549f56a3f4304a24b6a08fa2b9e8e1e97a2c1a';; *) echo "Unsupported macOS CPU" >&2; exit 1;; esac
   dll='DeadZoneLauncher.dll'
   ;;
 Linux)
   [ "$arch" = 'x86_64' ] || { echo "Unsupported Linux CPU" >&2; exit 1; }
-  rid='linux-x64'; sha='10ece906680fa786b6a122e61b59cab2b32aafc8162c4033c8866f1a427ac276'
+  rid='linux-x64'; sha='d314606700ea7dd3975dd69256cb59bb392bc517d020fb036bf288c78a26fb86'
   dll='DeadZoneLauncher.Linux.dll'
   ;;
 *) echo "Unsupported OS: $os" >&2; exit 1;;
 esac
 case "$rid" in
-linux-x64) name='patch-linux-x64-0.3.2.zip';;
-osx-arm64) name='patch-macos-arm64-0.3.2.zip';;
-osx-x64) name='patch-macos-x64-0.3.2.zip';;
+linux-x64) name='patch-linux-x64-0.3.3.zip';;
+osx-arm64) name='patch-macos-arm64-0.3.3.zip';;
+osx-x64) name='patch-macos-x64-0.3.3.zip';;
 esac
-url="https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/bootstrap-0.3.2/$name"
+url="https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/$name"
 [ -n "${1:-}" ] || {
   if [ "$os" = Darwin ]; then
     if [ -d "$HOME/Applications/DeadZoneLauncher.app" ]; then set -- "$HOME/Applications/DeadZoneLauncher.app"
@@ -73,7 +73,7 @@ mkdir "$temp/unpack"
 unzip -q "$temp/patch.zip" -d "$temp/unpack"
 test -f "$temp/unpack/$dll"
 test -f "$temp/unpack/assets/updates.json"
-backup="$candidate/.deadzone-backup-032-$(date +%Y%m%d%H%M%S)"
+backup="$candidate/.deadzone-backup-033-$(date +%Y%m%d%H%M%S)"
 mkdir "$backup"
 cp -p "$candidate/$dll" "$backup/$dll"
 if [ -f "$candidate/assets/updates.json" ]; then cp -p "$candidate/assets/updates.json" "$backup/updates.json"; fi
@@ -83,6 +83,6 @@ mv -f "$candidate/$dll.new" "$candidate/$dll"
 mkdir -p "$candidate/assets"
 cp "$temp/unpack/assets/updates.json" "$candidate/assets/updates.json.new"
 mv -f "$candidate/assets/updates.json.new" "$candidate/assets/updates.json"
-echo "Success: existing $os launcher upgraded to 0.3.2 via compact patch."
+echo "Success: existing $os launcher upgraded to 0.3.3 via compact patch."
 echo "Backup: $backup"
 echo "Start the same launcher; future modpack updates are automatic."
