@@ -6,12 +6,12 @@ os="$(uname -s)"
 arch="$(uname -m)"
 case "$os" in
 Darwin)
-  case "$arch" in arm64) rid='osx-arm64'; sha='d4a28d609a5f07c3954d551fc5b99f2189492ce7e3408d117235604b0affacc9';; x86_64) rid='osx-x64'; sha='183473854acc8cc8d685a34661549f56a3f4304a24b6a08fa2b9e8e1e97a2c1a';; *) echo "Unsupported macOS CPU" >&2; exit 1;; esac
+  case "$arch" in arm64) rid='osx-arm64'; sha='23f61311a615acbe77a0283539c70a82c76b95453a0be0dee4838750c93c4dd1';; x86_64) rid='osx-x64'; sha='33f15e53684f61ccf442190bf10e37840c880baafaa1dd00b258eac94acc19db';; *) echo "Unsupported macOS CPU" >&2; exit 1;; esac
   dll='DeadZoneLauncher.dll'
   ;;
 Linux)
   [ "$arch" = 'x86_64' ] || { echo "Unsupported Linux CPU" >&2; exit 1; }
-  rid='linux-x64'; sha='d314606700ea7dd3975dd69256cb59bb392bc517d020fb036bf288c78a26fb86'
+  rid='linux-x64'; sha='850850d82f0a07ee171a3e7cc69b5984eb4fa3017246d9821ee676d77ca19044'
   dll='DeadZoneLauncher.Linux.dll'
   ;;
 *) echo "Unsupported OS: $os" >&2; exit 1;;

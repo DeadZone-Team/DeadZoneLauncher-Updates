@@ -12,23 +12,23 @@
   "packages": {
     "win-x64": {
       "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-windows-x64-0.3.3.zip",
-      "sha256": "241b5c5eb41cb3f4143e300c3ef429a992e109195f624a1b4f72a8c8c33a9cdb",
-      "bytes": 1948563
+      "sha256": "1d8d1c5a5429620e6c3227cd8d2ec4a86ec76dbd44eba9ac22945ca5f98d7da2",
+      "bytes": 1948566
     },
     "linux-x64": {
       "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-linux-x64-0.3.3.zip",
-      "sha256": "d314606700ea7dd3975dd69256cb59bb392bc517d020fb036bf288c78a26fb86",
-      "bytes": 1944193
+      "sha256": "850850d82f0a07ee171a3e7cc69b5984eb4fa3017246d9821ee676d77ca19044",
+      "bytes": 1944192
     },
     "osx-arm64": {
       "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-macos-arm64-0.3.3.zip",
-      "sha256": "d4a28d609a5f07c3954d551fc5b99f2189492ce7e3408d117235604b0affacc9",
-      "bytes": 1504308
+      "sha256": "23f61311a615acbe77a0283539c70a82c76b95453a0be0dee4838750c93c4dd1",
+      "bytes": 1504313
     },
     "osx-x64": {
       "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-macos-x64-0.3.3.zip",
-      "sha256": "183473854acc8cc8d685a34661549f56a3f4304a24b6a08fa2b9e8e1e97a2c1a",
-      "bytes": 1504299
+      "sha256": "33f15e53684f61ccf442190bf10e37840c880baafaa1dd00b258eac94acc19db",
+      "bytes": 1504304
     }
   }
 }

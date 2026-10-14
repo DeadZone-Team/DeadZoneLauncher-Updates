@@ -3,7 +3,7 @@
 param([string]$LauncherDir = "")
 $ErrorActionPreference = "Stop"
 $Url = "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/packguard-0.3.3/patch-windows-x64-0.3.3.zip"
-$Expected = "241b5c5eb41cb3f4143e300c3ef429a992e109195f624a1b4f72a8c8c33a9cdb"
+$Expected = "1d8d1c5a5429620e6c3227cd8d2ec4a86ec76dbd44eba9ac22945ca5f98d7da2"
 if (!$LauncherDir) { $LauncherDir = $PSScriptRoot }
 $LauncherDir = [IO.Path]::GetFullPath($LauncherDir)
 $exe = Join-Path $LauncherDir "DeadZoneLauncher.exe"
