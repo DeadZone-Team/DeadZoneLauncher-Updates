@@ -21,7 +21,7 @@ linux-x64) name='patch-linux-x64-0.3.4.zip';;
 osx-arm64) name='patch-macos-arm64-0.3.4.zip';;
 osx-x64) name='patch-macos-x64-0.3.4.zip';;
 esac
-url="https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/$name"
+url="https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/$name"
 [ -n "${1:-}" ] || {
   if [ "$os" = Darwin ]; then
     if [ -d "$HOME/Applications/DeadZoneLauncher.app" ]; then set -- "$HOME/Applications/DeadZoneLauncher.app"

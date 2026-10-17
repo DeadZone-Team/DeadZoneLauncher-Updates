@@ -4,7 +4,7 @@ Official Minecraft 1.20.1 / Forge 47.3.0 patch channel for Windows, Linux and ma
 
 **Latest pack:** `2026.10.14.1`, [manifest.json](manifest.json). The launcher verifies the size and SHA-256 of each changed file before installing. Older managed files are backed up rather than deleted.
 
-**Launcher 0.3.1 one-time patch:** [release bootstrap-0.3.2](https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/tag/bootstrap-0.3.2) — a 1.5–2 MB code+configuration patch instead of a 200–300 MB installer. Close the launcher first.
+**Launcher 0.3.1 one-time patch:** [release bootstrap-0.3.2](https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/tag/bootstrap-0.3.2) — a 1.5–2 MB code+configuration patch instead of a 200–300 MB installer. Close the launcher first.
 
 - Windows portable install: [bootstrap-windows.ps1](bootstrap-windows.ps1), pass `-LauncherDir` containing `DeadZoneLauncher.exe`.
 - Linux unpacked: [bootstrap-linux-macos.sh](bootstrap-linux-macos.sh), point at the app folder containing `DeadZoneLauncher.Linux.dll`.

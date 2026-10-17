@@ -2,7 +2,7 @@
 # Does not replace the .exe, delete account data, or download any full release.
 param([string]$LauncherDir = "")
 $ErrorActionPreference = "Stop"
-$Url = "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-windows-x64-0.3.4.zip"
+$Url = "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-windows-x64-0.3.4.zip"
 $Expected = "32ebc1d0fdb66a97eba3469a019383b7eb4a879726cf451b5bf25c93e1205e6f"
 if (!$LauncherDir) { $LauncherDir = $PSScriptRoot }
 $LauncherDir = [IO.Path]::GetFullPath($LauncherDir)

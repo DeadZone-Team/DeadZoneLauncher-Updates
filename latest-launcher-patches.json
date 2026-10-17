@@ -13,22 +13,22 @@
   ],
   "packages": {
     "win-x64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-windows-x64-0.3.4.zip",
+      "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-windows-x64-0.3.4.zip",
       "sha256": "32ebc1d0fdb66a97eba3469a019383b7eb4a879726cf451b5bf25c93e1205e6f",
       "bytes": 1955176
     },
     "linux-x64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-linux-x64-0.3.4.zip",
+      "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-linux-x64-0.3.4.zip",
       "sha256": "f09931f01b2914d6a37c55e523a35e5f0acd7a8824463a71ac4b3f20327c1ed1",
       "bytes": 1951025
     },
     "osx-arm64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-macos-arm64-0.3.4.zip",
+      "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-macos-arm64-0.3.4.zip",
       "sha256": "52aa522b78d133d78539c8acb7359a2b21a9ffe3083ec50f5b544fb2de4e49f8",
       "bytes": 1510613
     },
     "osx-x64": {
-      "url": "https://github.com/Namnarak/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-macos-x64-0.3.4.zip",
+      "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/acguard-popup-0.3.4/patch-macos-x64-0.3.4.zip",
       "sha256": "f7139cb19afb175159f9b9bb7722125b6984862da38caa7ac250bcf061ad41ce",
       "bytes": 1510611
     }
