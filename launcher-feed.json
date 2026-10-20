@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "source": "DeadZone-Team/DeadZoneLauncher-Updates",
+  "channels": {
+    "stable": null,
+    "beta": {
+      "tag": "launcher-v0.4.1",
+      "version": "0.4.1",
+      "prerelease": true,
+      "releasedAt": "2026-10-20T01:37:26Z",
+      "assets": {
+        "windows": {
+          "name": "DeadZoneLauncher-Windows-Setup-v0.4.1.exe",
+          "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/launcher-v0.4.1/DeadZoneLauncher-Windows-Setup-v0.4.1.exe",
+          "bytes": 93226785,
+          "sha256": "c81b75f62d6cc1945358a5fff14a954948ac68cb56ec6f3d86c749a36cf434d4"
+        },
+        "linux": {
+          "name": "DeadZoneLauncher-Linux-x64-v0.4.1.AppImage",
+          "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/launcher-v0.4.1/DeadZoneLauncher-Linux-x64-v0.4.1.AppImage",
+          "bytes": 52742648,
+          "sha256": "9075cf73b1bec79f8fffdf312b108dbf852f66eec38bf51342f429690fbc0256"
+        },
+        "macos_arm64": {
+          "name": "DeadZoneLauncher-macOS-arm64-v0.4.1.dmg",
+          "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/launcher-v0.4.1/DeadZoneLauncher-macOS-arm64-v0.4.1.dmg",
+          "bytes": 93420737,
+          "sha256": "c5e3755317ed39e46a5c3b257660b7571ab7676600833d7910f63411263bd324"
+        },
+        "macos_x64": {
+          "name": "DeadZoneLauncher-macOS-x64-v0.4.1.dmg",
+          "url": "https://github.com/DeadZone-Team/DeadZoneLauncher-Updates/releases/download/launcher-v0.4.1/DeadZoneLauncher-macOS-x64-v0.4.1.dmg",
+          "bytes": 95948501,
+          "sha256": "fc634403a946e3404af48480ffe935c5dfcf4694f0960fa853c0fc5d5a53d271"
+        }
+      }
+    }
+  }
+}

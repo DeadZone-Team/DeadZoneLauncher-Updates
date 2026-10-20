@@ -1,0 +1,45 @@
+name: Sync launcher download feed
+
+on:
+  release:
+    types: [published, edited, deleted, unpublished, released, prereleased]
+  schedule:
+    # Release assets may be uploaded after publication; the scheduled sync catches them.
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: launcher-download-feed
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Read official released binaries
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api 'repos/DeadZone-Team/DeadZoneLauncher-Updates/releases?per_page=100' > "$RUNNER_TEMP/releases.json"
+      - name: Validate assets and build feed
+        run: |
+          python3 -m unittest discover -s tools -p 'test_launcher_feed.py' -v
+          python3 tools/build_launcher_feed.py --input "$RUNNER_TEMP/releases.json" --output launcher-feed.json
+      - name: Publish only if release data changes
+        run: |
+          if git diff --quiet -- launcher-feed.json; then
+            echo "No release changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add launcher-feed.json
+          git commit -m "chore: sync launcher download feed"
+          git pull --rebase origin main
+          git push origin HEAD:main
